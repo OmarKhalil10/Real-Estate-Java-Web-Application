@@ -3,17 +3,14 @@
 
 <hibernate-reverse-engineering>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="credentials"/>
-  <table-filter match-catalog="realestate" match-schema="realestate" match-name="credentials"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="deals"/>
-  <table-filter match-catalog="realestate" match-schema="realestate" match-name="deals_phone_number"/>
-  <table-filter match-catalog="realestate" match-schema="realestate" match-name="developers"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="description"/>
+  <table-filter match-catalog="realestate" match-schema="realestate" match-name="developers"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="employees"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="gender"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="job_history"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="jobs"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="leads"/>
-  <table-filter match-catalog="realestate" match-schema="realestate" match-name="leads_phone_number"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="projects"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="source"/>
   <table-filter match-catalog="realestate" match-schema="realestate" match-name="status"/>

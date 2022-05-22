@@ -1,7 +1,6 @@
 package com.RealEstate.www._MySQL_DB_DAOS;
 import com.RealEstate.www._MySQL_DB_MainDao.AbstractDao;
 import static com.RealEstate.www._MySQL_DB_MainDao.HibernateSessionConMySql.session;
-
 import com.RealEstate.www._MySQL_DB_Entities.Employees;
 import java.util.List;
 import org.hibernate.Query;

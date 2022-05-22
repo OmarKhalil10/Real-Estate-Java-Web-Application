@@ -1,5 +1,5 @@
 package com.RealEstate.www._MySQL_DB_Entities;
-// Generated May 11, 2022, 11:53:45 PM by Hibernate Tools 5.6.7.Final
+// Generated May 22, 2022, 1:51:59 AM by Hibernate Tools 5.6.7.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,12 +19,10 @@ public class Employees implements java.io.Serializable {
 	private String qualifications;
 	private String address;
 	private int salary;
-	private Set dealsesForAssignedToId = new HashSet(0);
-	private Set dealsesForPreAssignedToId = new HashSet(0);
+	private Set dealses = new HashSet(0);
 	private Set jobHistories = new HashSet(0);
 	private Credentials credentials;
-	private Set leadsesForAssignedToId = new HashSet(0);
-	private Set leadsesForPreAssignedToId = new HashSet(0);
+	private Set leadses = new HashSet(0);
 
 	public Employees() {
 	}
@@ -43,9 +41,8 @@ public class Employees implements java.io.Serializable {
 	}
 
 	public Employees(int employeesId, Gender gender, Jobs jobs, long ssn, String FName, String LName,
-			String phoneNumber, String qualifications, String address, int salary, Set dealsesForAssignedToId,
-			Set dealsesForPreAssignedToId, Set jobHistories, Credentials credentials, Set leadsesForAssignedToId,
-			Set leadsesForPreAssignedToId) {
+			String phoneNumber, String qualifications, String address, int salary, Set dealses, Set jobHistories,
+			Credentials credentials, Set leadses) {
 		this.employeesId = employeesId;
 		this.gender = gender;
 		this.jobs = jobs;
@@ -56,12 +53,10 @@ public class Employees implements java.io.Serializable {
 		this.qualifications = qualifications;
 		this.address = address;
 		this.salary = salary;
-		this.dealsesForAssignedToId = dealsesForAssignedToId;
-		this.dealsesForPreAssignedToId = dealsesForPreAssignedToId;
+		this.dealses = dealses;
 		this.jobHistories = jobHistories;
 		this.credentials = credentials;
-		this.leadsesForAssignedToId = leadsesForAssignedToId;
-		this.leadsesForPreAssignedToId = leadsesForPreAssignedToId;
+		this.leadses = leadses;
 	}
 
 	public int getEmployeesId() {
@@ -144,20 +139,12 @@ public class Employees implements java.io.Serializable {
 		this.salary = salary;
 	}
 
-	public Set getDealsesForAssignedToId() {
-		return this.dealsesForAssignedToId;
+	public Set getDealses() {
+		return this.dealses;
 	}
 
-	public void setDealsesForAssignedToId(Set dealsesForAssignedToId) {
-		this.dealsesForAssignedToId = dealsesForAssignedToId;
-	}
-
-	public Set getDealsesForPreAssignedToId() {
-		return this.dealsesForPreAssignedToId;
-	}
-
-	public void setDealsesForPreAssignedToId(Set dealsesForPreAssignedToId) {
-		this.dealsesForPreAssignedToId = dealsesForPreAssignedToId;
+	public void setDealses(Set dealses) {
+		this.dealses = dealses;
 	}
 
 	public Set getJobHistories() {
@@ -176,20 +163,12 @@ public class Employees implements java.io.Serializable {
 		this.credentials = credentials;
 	}
 
-	public Set getLeadsesForAssignedToId() {
-		return this.leadsesForAssignedToId;
+	public Set getLeadses() {
+		return this.leadses;
 	}
 
-	public void setLeadsesForAssignedToId(Set leadsesForAssignedToId) {
-		this.leadsesForAssignedToId = leadsesForAssignedToId;
-	}
-
-	public Set getLeadsesForPreAssignedToId() {
-		return this.leadsesForPreAssignedToId;
-	}
-
-	public void setLeadsesForPreAssignedToId(Set leadsesForPreAssignedToId) {
-		this.leadsesForPreAssignedToId = leadsesForPreAssignedToId;
+	public void setLeadses(Set leadses) {
+		this.leadses = leadses;
 	}
 
 }

@@ -53,6 +53,7 @@
                       <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                       <div class="unit-body"><a class="link-default" href="#">Al Gamea Al Haditha st<br> Al Abageyah, El Mokattam, Cairo Governorate</a></div>
                     </article><a class="button button-gray-bordered button-winona" href="#">Request a call</a>
+                  </article><a class="button button-gray-bordered button-winona" target="_blank" href="http://localhost:5020">login</a>
                   </div>
                 </div>
               </div>
@@ -66,7 +67,7 @@
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="/about">About us</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#projects">Projects</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="/projects">Projects</a>
                     </li>
                     <li class="rd-nav-item active"><a class="rd-nav-link" href="/contact">Contacts</a>
                     </li>
@@ -125,7 +126,7 @@
                 <div class="section-lg">
                   <h3 class="text-uppercase wow-outer"><span class="wow slideInDown">Contact Us</span></h3>
                   <!-- RD Mailform-->
-                  <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <form id ="contact-form" class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="/contactUsForm"> 
                     <div class="row row-10">
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp">
@@ -214,7 +215,7 @@
                 <ul class="list-nav"> 
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About</a></li>
-                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="/projects">Projects</a></li>
                   <li><a href="/contacts">Contacts</a></li>
                 </ul>
               </div>
@@ -246,5 +247,33 @@
     <!-- Javascript-->
     <script src="/static/js/core.min.js"></script>
     <script src="/static/js/script.js"></script>
+    <script>
+    document.getElementById("contact-form").onsubmit = function(e){
+		e.preventDefault();
+		
+		var formContent = document.getElementById("contact-form");
+		
+		var firstName = formContent['contact-first-name'].value;
+		var lastName = formContent['contact-last-name'].value;
+		var email = formContent['contact-email'].value;
+		var phoneNumber = formContent['contact-phone'].value;
+		var message = formContent['contact-message'].value;
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("POST", "/contactUsForm?firstName="+firstName+'&'+'lastName='+lastName+'&'+'email='+email+'&'+'phoneNumber='+phoneNumber+'&'+'message='+message, true);
+		xhttp.send();
+		
+		xhttp.onreadystatechange = function(){
+			if (this.readyState ==4 && this.status == 200){
+				var data = xhttp.responsetext;
+				if (data === "done") {
+					alert("data saved");
+				} else if (data === "not done") {
+						alert("error");
+						}
+					}
+				}
+			}
+    </script>
   </body>
 </html>

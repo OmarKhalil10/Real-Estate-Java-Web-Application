@@ -53,6 +53,7 @@
                       <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
                       <div class="unit-body"><a class="link-default" href="#">Al Gamea Al Haditha st<br> Al Abageyah, El Mokattam, Cairo Governorate</a></div>
                     </article><a class="button button-gray-bordered button-winona" href="#">Request a call</a>
+                  </article><a class="button button-gray-bordered button-winona" target="_blank" href="http://localhost:5020">login</a>
                   </div>
                 </div>
               </div>
@@ -66,7 +67,7 @@
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="/about">About us</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#projects">Projects</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="/projects">Projects</a>
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="/contact">Contacts</a>
                     </li>
@@ -99,7 +100,7 @@
             <div class="col-md-10 col-lg-6 col-xl-5">
               <h3 class="text-uppercase">Who We Are</h3>
               <p class="about-subtitle">RealEstate provides you with the best properties prices in the new administrative capital.</p>
-              <p>Best properties For sale in New Administrative Capital, compare with prices and photos between hundreds of properties of different areas.</p><a class="button button-lg button-primary button-winona" href="about-us.html">View properties</a>
+              <p>Best properties For sale in New Administrative Capital, compare with prices and photos between hundreds of properties of different areas.</p><a class="button button-lg button-primary button-winona" href="/projects">View properties</a>
             </div>
             <div class="col-md-10 col-lg-6 col-xl-6"><img class="img-responsive" src="/static/img/new-capital-cairo.jpeg" alt="" width="570" height="388"/>
             </div>
@@ -261,7 +262,7 @@
                 <ul class="list-nav"> 
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About</a></li>
-                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="/projects">Projects</a></li>
                   <li><a href="/contact">Contacts</a></li>
                 </ul>
               </div>

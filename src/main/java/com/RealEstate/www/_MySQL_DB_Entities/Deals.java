@@ -1,5 +1,5 @@
 package com.RealEstate.www._MySQL_DB_Entities;
-// Generated May 11, 2022, 11:53:45 PM by Hibernate Tools 5.6.7.Final
+// Generated May 22, 2022, 1:51:59 AM by Hibernate Tools 5.6.7.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,23 +11,22 @@ import java.util.Set;
 public class Deals implements java.io.Serializable {
 
 	private int dealsId;
-	private Employees employeesByAssignedToId;
-	private Employees employeesByPreAssignedToId;
+	private Employees employees;
 	private Projects projects;
 	private Date timeCreated;
 	private String buyerName;
 	private String email;
 	private int downPayment;
-	private Set dealsPhoneNumbers = new HashSet(0);
+	private String phone;
 	private Set descriptions = new HashSet(0);
 
 	public Deals() {
 	}
 
-	public Deals(int dealsId, Employees employeesByAssignedToId, Projects projects, Date timeCreated, String buyerName,
-			String email, int downPayment) {
+	public Deals(int dealsId, Employees employees, Projects projects, Date timeCreated, String buyerName, String email,
+			int downPayment) {
 		this.dealsId = dealsId;
-		this.employeesByAssignedToId = employeesByAssignedToId;
+		this.employees = employees;
 		this.projects = projects;
 		this.timeCreated = timeCreated;
 		this.buyerName = buyerName;
@@ -35,18 +34,16 @@ public class Deals implements java.io.Serializable {
 		this.downPayment = downPayment;
 	}
 
-	public Deals(int dealsId, Employees employeesByAssignedToId, Employees employeesByPreAssignedToId,
-			Projects projects, Date timeCreated, String buyerName, String email, int downPayment, Set dealsPhoneNumbers,
-			Set descriptions) {
+	public Deals(int dealsId, Employees employees, Projects projects, Date timeCreated, String buyerName, String email,
+			int downPayment, String phone, Set descriptions) {
 		this.dealsId = dealsId;
-		this.employeesByAssignedToId = employeesByAssignedToId;
-		this.employeesByPreAssignedToId = employeesByPreAssignedToId;
+		this.employees = employees;
 		this.projects = projects;
 		this.timeCreated = timeCreated;
 		this.buyerName = buyerName;
 		this.email = email;
 		this.downPayment = downPayment;
-		this.dealsPhoneNumbers = dealsPhoneNumbers;
+		this.phone = phone;
 		this.descriptions = descriptions;
 	}
 
@@ -58,20 +55,12 @@ public class Deals implements java.io.Serializable {
 		this.dealsId = dealsId;
 	}
 
-	public Employees getEmployeesByAssignedToId() {
-		return this.employeesByAssignedToId;
+	public Employees getEmployees() {
+		return this.employees;
 	}
 
-	public void setEmployeesByAssignedToId(Employees employeesByAssignedToId) {
-		this.employeesByAssignedToId = employeesByAssignedToId;
-	}
-
-	public Employees getEmployeesByPreAssignedToId() {
-		return this.employeesByPreAssignedToId;
-	}
-
-	public void setEmployeesByPreAssignedToId(Employees employeesByPreAssignedToId) {
-		this.employeesByPreAssignedToId = employeesByPreAssignedToId;
+	public void setEmployees(Employees employees) {
+		this.employees = employees;
 	}
 
 	public Projects getProjects() {
@@ -114,12 +103,12 @@ public class Deals implements java.io.Serializable {
 		this.downPayment = downPayment;
 	}
 
-	public Set getDealsPhoneNumbers() {
-		return this.dealsPhoneNumbers;
+	public String getPhone() {
+		return this.phone;
 	}
 
-	public void setDealsPhoneNumbers(Set dealsPhoneNumbers) {
-		this.dealsPhoneNumbers = dealsPhoneNumbers;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	public Set getDescriptions() {

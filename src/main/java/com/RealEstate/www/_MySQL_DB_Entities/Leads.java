@@ -1,5 +1,5 @@
 package com.RealEstate.www._MySQL_DB_Entities;
-// Generated May 11, 2022, 11:53:45 PM by Hibernate Tools 5.6.7.Final
+// Generated May 22, 2022, 1:51:59 AM by Hibernate Tools 5.6.7.Final
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,42 +11,37 @@ import java.util.Set;
 public class Leads implements java.io.Serializable {
 
 	private int leadsId;
-	private Employees employeesByAssignedToId;
-	private Employees employeesByPreAssignedToId;
+	private Employees employees;
 	private Source source;
 	private Date timeCreated;
 	private String clientName;
 	private String email;
 	private String request;
-	private Set leadsPhoneNumbers = new HashSet(0);
+	private String phone;
 	private Set descriptions = new HashSet(0);
 
 	public Leads() {
 	}
 
-	public Leads(int leadsId, Employees employeesByAssignedToId, Employees employeesByPreAssignedToId, Source source,
-			Date timeCreated, String clientName, String email) {
+	public Leads(int leadsId, Employees employees, Source source, Date timeCreated, String clientName, String email) {
 		this.leadsId = leadsId;
-		this.employeesByAssignedToId = employeesByAssignedToId;
-		this.employeesByPreAssignedToId = employeesByPreAssignedToId;
+		this.employees = employees;
 		this.source = source;
 		this.timeCreated = timeCreated;
 		this.clientName = clientName;
 		this.email = email;
 	}
 
-	public Leads(int leadsId, Employees employeesByAssignedToId, Employees employeesByPreAssignedToId, Source source,
-			Date timeCreated, String clientName, String email, String request, Set leadsPhoneNumbers,
-			Set descriptions) {
+	public Leads(int leadsId, Employees employees, Source source, Date timeCreated, String clientName, String email,
+			String request, String phone, Set descriptions) {
 		this.leadsId = leadsId;
-		this.employeesByAssignedToId = employeesByAssignedToId;
-		this.employeesByPreAssignedToId = employeesByPreAssignedToId;
+		this.employees = employees;
 		this.source = source;
 		this.timeCreated = timeCreated;
 		this.clientName = clientName;
 		this.email = email;
 		this.request = request;
-		this.leadsPhoneNumbers = leadsPhoneNumbers;
+		this.phone = phone;
 		this.descriptions = descriptions;
 	}
 
@@ -58,20 +53,12 @@ public class Leads implements java.io.Serializable {
 		this.leadsId = leadsId;
 	}
 
-	public Employees getEmployeesByAssignedToId() {
-		return this.employeesByAssignedToId;
+	public Employees getEmployees() {
+		return this.employees;
 	}
 
-	public void setEmployeesByAssignedToId(Employees employeesByAssignedToId) {
-		this.employeesByAssignedToId = employeesByAssignedToId;
-	}
-
-	public Employees getEmployeesByPreAssignedToId() {
-		return this.employeesByPreAssignedToId;
-	}
-
-	public void setEmployeesByPreAssignedToId(Employees employeesByPreAssignedToId) {
-		this.employeesByPreAssignedToId = employeesByPreAssignedToId;
+	public void setEmployees(Employees employees) {
+		this.employees = employees;
 	}
 
 	public Source getSource() {
@@ -114,12 +101,12 @@ public class Leads implements java.io.Serializable {
 		this.request = request;
 	}
 
-	public Set getLeadsPhoneNumbers() {
-		return this.leadsPhoneNumbers;
+	public String getPhone() {
+		return this.phone;
 	}
 
-	public void setLeadsPhoneNumbers(Set leadsPhoneNumbers) {
-		this.leadsPhoneNumbers = leadsPhoneNumbers;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	public Set getDescriptions() {

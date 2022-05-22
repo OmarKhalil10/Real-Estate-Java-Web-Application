@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated May 22, 2022, 1:51:59 AM by Hibernate Tools 5.6.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="realestate" name="com.RealEstate.www._MySQL_DB_Entities.Projects" optimistic-lock="none" table="projects">
+        <id name="projectsId" type="int">
+            <column name="Projects_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.RealEstate.www._MySQL_DB_Entities.Developers" fetch="select" name="developers">
+            <column name="Developer_ID" not-null="true"/>
+        </many-to-one>
+        <property name="name" type="string">
+            <column length="100" name="Name" not-null="true"/>
+        </property>
+        <property name="unitPrice" type="int">
+            <column name="Unit_Price" not-null="true"/>
+        </property>
+        <property name="location" type="string">
+            <column length="120" name="Location" not-null="true"/>
+        </property>
+        <property name="type" type="string">
+            <column length="100" name="Type" not-null="true"/>
+        </property>
+        <property name="commission" type="string">
+            <column length="20" name="Commission" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="dealses" table="deals">
+            <key>
+                <column name="Project_ID" not-null="true"/>
+            </key>
+            <one-to-many class="com.RealEstate.www._MySQL_DB_Entities.Deals"/>
+        </set>
+    </class>
+</hibernate-mapping>
